@@ -1,0 +1,512 @@
+---
+---
+
+
+$green: #03d2c4
+$yellow: #fbeb8b
+$black: #2e2e2e
+
+
+html, body
+  padding: 0
+  margin: 0
+  height: 100%
+  font-family: 'brandon_grotesque_regularRg'
+
+.clearfix:before, .clearfix:after
+  content: " "
+  display: table
+
+.clearfix:after
+  clear: both
+
+.menu
+  display: none
+
+#top_header
+  #main_nav
+    font-size: .9em
+    padding: 5em
+
+nav
+  background-color: $black
+  display: flex
+  height: 60px
+  justify-content: center
+  align-items: center
+  padding: 12.5px
+  a
+    list-style: none
+    display: inline
+    color: #797979
+    padding: 25px
+    font-family: 'brandon_grotesquelight'
+    text-decoration: none
+    font-size: 1.2rem
+
+
+
+
+// Top Header
+@media only screen and (max-width: 788px)
+
+  #top_header
+    padding: 20px
+    background-color: $black
+    #main_nav
+      display: none
+    #main_nav.active
+      display: block
+      width: 100%
+      height: auto
+      margin-bottom: 0
+      a
+        display: block
+        padding: 1em 0
+        border-bottom: 1px solid $green
+        &:last-child
+          border-bottom: none
+    .menu
+      display: block
+      float: right
+      i
+        font-size: 2.0em
+        color: white
+
+
+#header
+  padding: 0
+  margin: 0
+
+.title1
+  width: 50%
+  background-image: url(/img/n2.jpg)
+  background-repeat: no-repeat
+  background-size: cover
+  box-sizing: border-box
+  -webkit-animation: animateBackground infinite cubic-bezier(0.34, 0.54, 0.65, 0.57) 20s
+  margin: 0
+  padding: 0
+  float: left
+  min-height: 500px
+  height: auto
+  position: relative
+  .text
+    background-color: rgba(27, 27, 27, 0.9)
+    min-height: 150px
+    height: auto
+    position: absolute
+    bottom: 0
+    width: 100%
+    padding-bottom: 0px
+
+    .information
+      -webkit-font-smoothing: antialiased
+      display: inline-block
+      color: $yellow
+      font-size: 0.9rem
+      padding: 25px 0px 0px 50px
+      span:nth-child(2)
+        padding-left: 30px
+  h2
+    color: white
+    padding-left: 50px
+    padding-right: 25px
+    font-family: 'brandon_grotesquemedium'
+    margin-bottom: 10px
+    margin-top: 10px
+    font-size: 1.9em
+    letter-spacing: 0.01em
+    line-height: 1.3
+    -webkit-font-smoothing: antialiased
+  p
+    -webkit-font-smoothing: antialiased
+    width: 100%
+    color: white
+    padding-left: 50px
+    font-size: 0.9rem
+    line-height: 1.5rem
+    padding-bottom: 0px
+    font-family: 'brandon_grotesque_regularRg'
+    padding-top: 5px
+  .textform
+    margin: 0
+    height: auto
+    padding-bottom: 15px
+    max-width: 600px
+    width: auto
+    padding-right: 25px
+
+.title2
+  width: 50%
+  background-image: url(/img/n1.png)
+  background-repeat: no-repeat
+  background-size: cover
+  -webkit-animation: animateBackground infinite cubic-bezier(0.34, 0.54, 0.65, 0.57) 20s
+  background-position: center center
+  box-sizing: border-box
+  margin: 0
+  padding: 0
+  float: left
+  min-height: 500px
+  height: auto
+  position: relative
+  .text
+    background-color: rgba(252, 243, 187, 0.9)
+    min-height: 250px
+    height: auto
+    position: absolute
+    bottom: 0
+    width: 100%
+    padding-bottom: 0px
+    .information
+      -webkit-font-smoothing: antialiased
+      display: inline-block
+      color: $black
+      font-size: 0.9rem
+      padding: 25px 0px 0px 50px
+      span:nth-child(2)
+        padding-left: 30px
+  h2
+    color: $black
+    font-family: 'brandon_grotesquemedium'
+    padding-left: 50px
+    margin-bottom: 10px
+    margin-top: 10px
+    letter-spacing: 0.01em
+    line-height: 1.3
+    -webkit-font-smoothing: antialiased
+    font-size: 1.9em
+    padding-right: 25px
+  p
+    -webkit-font-smoothing: antialiased
+    width: 100%
+    color: $black
+    padding-left: 50px
+    font-size: 0.9rem
+    line-height: 1.5rem
+    padding-bottom: 0px
+    font-family: 'brandon_grotesque_regularRg'
+    padding-top: 25px
+  .textform
+    margin: 0
+    height: auto
+    padding-bottom: 12.5px
+    width: auto
+    max-width: 660px
+    padding-right: 25px
+
+
+// 1
+
+@media only screen and (max-width: 961px)
+  .title1
+    .text
+      .information
+      h2
+        font-size: 1.5em
+      p
+        line-height: 1.4rem
+
+@media only screen and (max-width: 628px)
+  .title1
+    width: 100%
+    .text
+      .information
+      h2
+        font-size: 1.5em
+      p
+        line-height: 1.4rem
+
+// 2
+
+@media only screen and (max-width: 961px)
+  .title2
+    .text
+      .information
+      h2
+        font-size: 1.5em
+      p
+        line-height: 1.4rem
+
+@media only screen and (max-width: 628px)
+  .title2
+    width: 100%
+    .text
+      .information
+      h2
+        font-size: 1.5em
+      p
+        line-height: 1.4rem
+
+
+// SECTION 2 STYLES //
+
+#area2
+  text-align: center
+
+.h2
+  color: $black
+  font-family: 'brandon_grotesquemedium'
+  text-align: center
+  margin-top: 50px
+  display: inline-block
+  font-size: 1.5rem
+  border-bottom: 3px solid $green
+  -webkit-font-smoothing: antialiased
+.area2
+  text-align: left
+  margin: 0 auto
+  width: 1400px
+  max-width: 95%
+  display: flex
+  justify-content: center
+  padding-top: 0px
+  padding-bottom: 40px
+
+
+.wrap.grey
+  background-color: #f3f3f3
+
+.wrap
+  width: 25%
+  float: left
+  height: auto
+  padding: 0px 0px
+  margin: 20px
+  box-sizing: border-box
+  .picture
+    width: auto
+    height: 200px
+    background-image: url(/img/n4.png)
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center center
+  h2
+    font-size: 1.3rem
+    margin-bottom: 10
+    color: $black
+    padding: 0px 15px
+    -webkit-font-smoothing: antialiased
+  h3
+    font-family: 'brandon_grotesquelight'
+    margin-top: 10px
+    font-size: 0.7rem
+    margin-bottom: 10px
+    color: $green
+    padding: 0px 15px
+    padding-top: 12.5px
+    -webkit-font-smoothing: antialiased
+    span
+      padding-left: 25px
+  p
+    font-size: 0.9rem
+    line-height: 1.4
+    padding: 10px 15px
+    -webkit-font-smoothing: antialiased
+
+@media only screen and (max-width: 731px)
+  .area2
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-wrap: wrap
+    .wrap
+      width: 70%
+      max-width: 400px
+      height: auto
+      padding: 0px 0px
+      margin: 20px
+      box-sizing: border-box
+
+
+
+// SECTION 3 STYLES //
+
+#area3
+  .wrapper
+    height: 400px
+    background-color: #f3f3f3
+    display: flex
+    align-items: center
+    justify-content: center
+    .textwrapper
+      width: 50%
+      padding: 50px 25px 50px 50px
+      text-align: left
+      max-width: 850px
+      h3
+        color: $green
+        margin: 0
+        font-size: 0.8rem
+        padding-bottom: 12.5px
+        -webkit-font-smoothing: antialiased
+      h2
+        margin: 0
+        text-align: left
+        font-size: 1.5rem
+        -webkit-font-smoothing: antialiased
+      p
+        margin-top: 0
+        padding-top: 12.5px
+        font-size: 0.9rem
+        line-height: 1.5
+        -webkit-font-smoothing: antialiased
+    .kaka
+      float: right
+      width: 50%
+      margin: 25px
+      .picturewrapper
+        border-radius: 0.5rem
+        background-image: url(/img/n4.png)
+        background-repeat: no-repeat
+        background-size: cover
+        height: 310px
+      h2
+        margin: 0
+        padding-top: 5px
+        font-size: 0.9rem
+        color: #9c9c9c
+        font-family: 'brandon_grotesquelight'
+        padding-left: 3px
+
+      background-position: center center
+
+
+@media only screen and (max-width: 700px)
+
+  #area3
+    .wrapper
+      height: auto
+      background-color: #f3f3f3
+      display: flex
+      align-items: center
+      justify-content: center
+      flex-wrap: wrap
+      padding-bottom: 25px
+      .textwrapper
+        width: 80%
+        padding: 50px 25px 0px 50px
+        text-align: left
+        max-width: 850px
+        line-height: 1.5
+      .kaka
+        float: right
+        width: 80%
+        margin: 25px
+
+
+
+#newsletter
+  background: url(/img/wallpaper.png), #29a69d
+  text-align: center
+  padding-bottom: 50px
+  -webkit-font-smoothing: antialiased
+  .wrapper
+    max-width: 90%
+    margin: 0 auto
+  h2
+    padding-top: 50px
+    margin-bottom: 50px
+    margin: 0
+    font-size: 1.5rem
+    font-family: 'brandon_grotesquemedium'
+    color: $yellow
+    -webkit-font-smoothing: antialiased
+    border-bottom: 3px solid white
+    display: inline-block
+  p
+    padding-bottom: 25px
+    margin-bottom: 0px
+  form
+    display: inline-block
+    input
+      margin-top: 25px
+      background: $black
+      border: none
+      outline: none
+      padding: 12.5px
+      margin-right: 0
+      margin-left: 0
+      color: white
+    input[type=submit]
+      background-color: #36d3c5
+      color: $black
+
+.bereiche
+  display: flex
+  justify-content: center
+  .viereck
+    height: 50px
+    width: 50px
+    background-color: #36d3c5
+    margin: 2.5px
+    display: flex
+    justify-content: center
+    align-items: center
+    position: relative
+
+
+@media only screen and (max-width: 487px)
+  #newsletter
+    background: url(/img/wallpaper.png), #29a69d
+    text-align: center
+    padding-bottom: 50px
+    -webkit-font-smoothing: antialiased
+    .wrapper
+      max-width: 90%
+      margin: 0 auto
+    h2
+      padding-top: 50px
+      margin-bottom: 50px
+      margin: 0
+      font-size: 1.5rem
+      font-family: 'brandon_grotesquemedium'
+      color: $yellow
+      -webkit-font-smoothing: antialiased
+      border-bottom: 3px solid white
+      display: inline-block
+    p
+      padding-bottom: 25px
+      margin-bottom: 0px
+    form
+      display: flex
+      justify-content: center
+      flex-direction: column
+      input
+        margin-top: 25px
+        background: $black
+        border: none
+        outline: none
+        padding: 12.5px
+        margin-right: 0
+        margin-left: 0
+        color: white
+        width: 300px
+        margin: 25px auto
+        margin-bottom: 0px
+      input[type=submit]
+        background-color: #36d3c5
+        color: $black
+        width: 90px
+        margin: 25px auto
+
+
+footer
+  nav
+    height: auto
+    background-color: $black
+    color: white
+    display: flex
+    justify-content: space-between
+    align-items: center
+    ul
+      padding-left: 0px
+      li
+        -webkit-font-smoothing: antialiased
+        color: white
+        list-style: none
+        display: inline
+        padding: 25px
+        font-family: 'brandon_grotesquelight'
+        font-size: 0.9rem
