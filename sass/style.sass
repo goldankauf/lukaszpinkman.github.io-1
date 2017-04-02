@@ -84,7 +84,7 @@ nav
 .title1
   border-right: 2px solid $yellow
   width: 50%
-  background-image: url(/img/n2.jpg)
+  background-image: url(/img/h1.png)
   background-repeat: no-repeat
   background-size: cover
   box-sizing: border-box
@@ -92,7 +92,7 @@ nav
   margin: 0
   padding: 0
   float: left
-  min-height: 650px
+  min-height: 550px
   height: auto
   position: relative
   .text
@@ -141,17 +141,27 @@ nav
     width: auto
     padding-right: 50px
 
+.title1:hover
+  width: 50%
+  box-sizing: border-box
+  background-image: url(/img/h2.png)
+  background-repeat: no-repeat
+  background-size: 150%
+  background-position: center top
+  transition: all 2s
+
 .title2
   width: 50%
   box-sizing: border-box
-  background-image: url(/img/n1.png)
+  background-image: url(/img/h11.png)
   background-repeat: no-repeat
   background-size: 100%
   background-position: center top
+  background-size: cover
   margin: 0
   padding: 0
   float: left
-  min-height: 650px
+  min-height: 550px
   height: auto
   position: relative
   .text
@@ -201,20 +211,13 @@ nav
 .title2:hover
   width: 50%
   box-sizing: border-box
-  background-image: url(/img/n4.png)
+  background-image: url(/img/h22.png)
   background-repeat: no-repeat
   background-size: 150%
   background-position: center top
   transition: all 2s
 
-.title1:hover
-  width: 50%
-  box-sizing: border-box
-  background-image: url(/img/n4.png)
-  background-repeat: no-repeat
-  background-size: 150%
-  background-position: center top
-  transition: all 2s
+
 
 
 // 1
@@ -306,10 +309,15 @@ nav
   .picture
     width: auto
     height: 174
-    background-image: url(/img/n4.png)
+    background-image: url(/img/b1.png)
     background-repeat: no-repeat
     background-size: cover
     background-position: center center
+  .picture.two
+    background-image: url(/img/b3.jpg)
+  .picture.three
+    background-image: url(/img/b4.jpg)
+  .picture.three
   h2
 
     font-size: 1.3rem
@@ -364,7 +372,7 @@ nav
 #area3
   .wrapper
     height: 400px
-    background-image: url(/img/n2.png)
+    background-image: url(/img/b5.jpg)
     background-repeat: no-repeat
     background-size: cover
     -webkit-font-smoothing: antialiased
@@ -383,8 +391,9 @@ nav
         padding: 12.5px 0px
         margin: 0
         color: white
-        font-size: 1.5rem
+        font-size: 1.7rem
         color: $yellow
+        font-family: 'brandon_grotesquebold'
       h3
         padding: 0
         margin: 0
@@ -394,8 +403,8 @@ nav
         padding: 0
         margin: 0
         color: white
-        font-size: .9rem
-        line-height: 1.4rem
+        font-size: 1rem
+        line-height: 1.5rem
 
 
 
@@ -433,7 +442,7 @@ nav
     margin: 0
     font-size: 1.5rem
     font-family: 'brandon_grotesquemedium'
-    color: $green
+    color: #888888
     -webkit-font-smoothing: antialiased
     display: inline-block
   p
@@ -457,6 +466,7 @@ nav
     input[type=submit]
       background-color: #36d3c5
       color: $black
+      padding-right: 20px
 
 .bereiche
   display: flex

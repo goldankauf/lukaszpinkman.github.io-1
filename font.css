@@ -70,11 +70,3 @@
     font-style: normal;
 
 }
-
-
-@-webkit-keyframes animateBackground {
-0% { background-size: 100% auto; }
-50% { background-size: 150% auto; }
-100% { background-size: 100% auto; }
-}
-}
