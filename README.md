@@ -1,2 +1,0 @@
-# lukaszpinkman.github.io
-f

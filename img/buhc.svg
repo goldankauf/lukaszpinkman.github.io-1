@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="169px" height="99px" viewBox="0 0 169 99" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>Asset 1</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Bildschirm-Groß" transform="translate(-286.000000, -1082.000000)" fill-rule="nonzero" fill="#AEAEAE">
+            <g id="Group-7" transform="translate(90.000000, 1082.000000)">
+                <g id="Asset-1" transform="translate(196.000000, 0.000000)">
+                    <g id="Layer_2">
+                        <g>
+                            <g id="Layer_1-2">
+                                <path d="M160.949061,21.4489573 L94.5454433,82.3437438 C88.8493163,87.5114777 80.1402665,87.5114777 74.4441394,82.3437438 L8.04052157,21.4489573 L0,30.1942403 L66.4036178,91.042999 C76.6685416,100.359886 92.3672511,100.359886 102.632175,91.042999 L168.989583,30.1942403 L160.949061,21.4489573 Z" id="Shape"></path>
+                                <polygon id="Shape" points="16.7279817 13.5321748 11.0441647 18.8714002 78.6492398 83.2182721"></polygon>
+                                <polygon id="Shape" points="79.9893267 82.757994 26.5706891 6.39786495 20.3323534 11.0466733 23.3359965 14.6828699"></polygon>
+                                <polygon id="Shape" points="36.7368658 0 30.0364312 3.95839126 81.6990928 81.5612711"></polygon>
+                                <polygon id="Shape" points="157.714369 19.3316783 151.984342 13.9924528 90.0630836 83.6785501"></polygon>
+                                <polygon id="Shape" points="145.376327 15.143148 148.42618 11.4609235 142.141634 6.858143 88.7229967 83.1722443"></polygon>
+                                <polygon id="Shape" points="138.722102 4.37264151 131.975458 0.460278054 87.0132306 82.0215492"></polygon>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
