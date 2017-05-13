@@ -773,24 +773,77 @@ footer
   margin-top: 50px
 
 .container
-  padding: 50px
   padding-top: 10px
+  margin: 0 auto
+  box-sizing: border-box
+  max-width: 90%
+  +clearfix
   .item
-    img
-      width: 33.33%
+    width: 32.33%
+    float: left
+    padding: 2px
+    margin: 2px
+    box-sizing: border-box
+    background-image: url(/img/test.png)
+    background-size: 600px
+    background-position: center center
+    height: 300px
+  .item-1
+    background-image: url(/img/eins.jpg)
+  .item-2
+    background-image: url(/img/zwei.jpg)
+  .item-3
+    background-image: url(/img/drei.jpg)
+  .item-4
+    background-image: url(/img/vier.jpg)
+  .item-5
+    background-image: url(/img/fuenf.jpg)
+  .item-6
+    background-image: url(/img/sechs.jpg)
+  .item-7
+    background-image: url(/img/sieben.jpg)
+  .item-8
+    background-image: url(/img/acht.jpg)
+  .item-9
+    background-image: url(/img/neun.jpg)
+
+
+
+@media only screen and (max-width: 500px)
+  .container
+    padding-top: 10px
+    margin: 0 auto
+    box-sizing: border-box
+    max-width: 90%
+    +clearfix
+    .item
+      width: 49.00%
       float: left
       padding: 2px
+      margin: 2px
       box-sizing: border-box
-
-@media only screen and (max-width: 550px)
-  .container
-    padding: 50px
-    .item
-      img
-        width: 50.00%
-        float: left
-        padding: 2px
-        box-sizing: border-box
+      background-image: url(/img/test.png)
+      background-size: 600px
+      background-position: center center
+      height: 300px
+    .item-1
+      background-image: url(/img/eins.jpg)
+    .item-2
+      background-image: url(/img/zwei.jpg)
+    .item-3
+      background-image: url(/img/drei.jpg)
+    .item-4
+      background-image: url(/img/vier.jpg)
+    .item-5
+      background-image: url(/img/fuenf.jpg)
+    .item-6
+      background-image: url(/img/sechs.jpg)
+    .item-7
+      background-image: url(/img/sieben.jpg)
+    .item-8
+      background-image: url(/img/acht.jpg)
+    .item-9
+      background-image: url(/img/neun.jpg)
 
 
 // FULL SCREEN -----------------------------------------------------------------
@@ -826,3 +879,21 @@ footer
   position: absolute
   top: 1rem
   left: 1rem
+  
+// Predigt -----------------------------------------------------------------
+
+#predigt
+  .wrapper
+    padding-top: 50px
+    max-width: 600px
+    margin: 0 auto
+    .predigt
+      padding-top: 50px
+      max-width: 90%
+    .predigt-titel
+      color: #696969
+      padding-top: 10px
+    .predigt-text
+      color: #adadad
+      font-family: 'proxima_nova_rgregular'
+      line-height: 1.4rem
