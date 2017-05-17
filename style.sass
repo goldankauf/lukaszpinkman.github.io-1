@@ -59,10 +59,13 @@ body, html
     left: 20
     top: 20
     z-index: 9999
-    +clearfix
     cursor: pointer
     display: block
-
+  .menu.active:after
+    clear: both;
+    content: "";
+    display: table;
+    
   .menu.active
     z-index: 9999
     color: $red
@@ -71,9 +74,12 @@ body, html
     left: 20
     top: 20
     z-index: 9999
-    +clearfix
     cursor: pointer
     display: block
+   .menu.active:after
+    clear: both;
+    content: "";
+    display: table;
 
   #main_nav
     display: none
