@@ -1,93 +1,59 @@
----
----
+
+
+// Variablen /////////////////////////////////////////////////////////////////
+
+$red: #F97F79
+$grey: #ABABAB
+
+// Allgemein ////////////////////////////////////////////////////////////////
 
 body, html
   text-align: center
   -webkit-font-smoothing: antialiased
-  font-family: 'proxima_nova_rgregular'
-  margin: 0
-  padding: 0
+  font-family: 'Palatino'
 
-a
-  text-decoration: none
+.title
+  color: $red
+  font-size: 2rem
+  text-align: left
 
+.text
+  color: $grey
+  font-size: 1rem
+  line-height: 1.6rem
+  text-align: left
 
+// Import ///////////////////////////////////////////////////////////////////
 
-// AREA1 -------------------------------------------------------------------
-
-.hero::before
-  content: ''
-  position: absolute
-  border-left: 1px solid rgba(234, 177, 125, 0.4)
-  border-right: 1px solid rgba(234, 177, 125, 0.4)
-  width: 3px
-  left: 19%
-  height: 120%
-  z-index: 9998
-  margin-top: 0px
-
-.hero::after
-  content: ''
-  position: absolute
-  border-bottom: 1px solid rgba(234, 177, 125, 0.4)
-  border-top: 1px solid rgba(234, 177, 125, 0.4)
-  width: 30%
-  top: 30%
-  left: 0
-  height: 3px
-  z-index: 9998
-  margin-left: 50px
+@import "bourbon"
 
 
-.hero
-  background-image: url(/img/hero.jpg)
-  background-position: center
-  background-repeat: no-repeat
-  background-size: 1500px
-  height: 500px
-  position: relative
-  .overlay
-    background-color: rgba(1, 1, 2, 0.69)
-    height: 100%
-    width: 100%
-    position: absolute
-    display: flex
-    justify-content: center
-    align-items: center
-    flex-direction: column
-    nav
-      position: absolute
-      top: 20
-      ul
-        padding-left: 0
-      li
-        display: inline-block
-        color: white
-        list-style: none
-        padding-left: 20px
-        padding-right: 20px
-      li.active
-        color: #EAB17D
-    .wrapper
-      display: flex
-      justify-content: center
-      align-items: center
-      flex-direction: column
-      h2
-        z-index: 99
-        color: white
-        font-family: 'proxima_nova_blblack'
-        font-size: 55px
-        padding-left: 20px
-        padding-right: 20px
-      svg
-        position: absolute
+// Nav ////////////////////////////////////////////////////////////////////
+
+#main_nav
+  ul
+    padding-left: 0
+    padding: 50px
+    margin: 0
+    li
+      display: inline-block
+      color: #ccc
+      list-style: none
+      padding-left: 30px
+      padding-right: 30px
+      box-sizing: border-box
+    li.active
+      color: $red
+    li:hover
+      color: $red
+      cursor: pointer
 
 .menu
   display: none
 
 
-@media only screen and (max-width: 500px)
+@media only screen and (max-width: 590px)
+
   .menu
     z-index: 9999
     color: white
@@ -96,650 +62,372 @@ a
     left: 20
     top: 20
     z-index: 9999
+    +clearfix
     cursor: pointer
     display: block
 
-  .hero
-    .overlay
-      nav
-        display: none
+  .menu.active
+    z-index: 9999
+    color: $red
+    font-size: 28px
+    position: absolute
+    left: 20
+    top: 20
+    z-index: 9999
+    +clearfix
+    cursor: pointer
+    display: block
+
+  #main_nav
+    display: none
+
+  #main_nav.active
+    display: block
+    ul
+      padding-left: 0
+      padding: 50px
+      margin: 0
+    li
+      display: block
+      color: #ccc
+      list-style: none
+      padding: 20px
+      box-sizing: border-box
+    li.active
+      color: $red
+    li:hover
+      color: $red
+      cursor: pointer
+
+
+
+
+
+// Hero ////////////////////////////////////////////////////////////////////
 
 .hero
+  background-image: url(/img/hero.jpg)
+  background-position: center
+  background-repeat: no-repeat
+  background-size: cover
+  height: 500px
+  position: relative
   .overlay
-    nav.active
-      position: absolute
-      top: 0
-      padding-top: 100px
-      left: 0
-      box-sizing: border-box
-      display: block
-      width: 34%
-      height: 100vh
-      background-color: black
-      z-index: 9998
-      ul
-        padding-left: 0
-      li
-        display: block
-        padding: 10px
-        color: white
-        list-style: none
+    background-color: rgba(219, 125, 115, 0.9)
+    height: 100%
+    width: 100%
+    position: absolute
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    .wrapper
+      display: flex
+      justify-content: center
+      align-items: center
+      flex-direction: column
+      h2
+        z-index: 9999
+        color: #8e4f4b
+        font-family: 'proxima_nova_blblack'
+        font-size: 55px
         padding-left: 20px
         padding-right: 20px
-      li.active
-        color: #EAB17D
+        margin: 0
+      svg
+        position: absolute
 
 
-
-@media only screen and (max-width: 500px)
+@media only screen and (max-width: 590px)
   .hero
-    height: 300px
+    background-image: url(/img/hero.jpg)
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover
+    height: 500px
+    position: relative
+    transform: skewY(-10deg)
+    margin-top: -40px
     .overlay
-      nav
-        ul
-        li
-        li.active
-      .wrapper
-        h2
-          color: white
-          font-family: 'proxima_nova_blblack'
-          font-size: 33px
-          padding-left: 20px
-          padding-right: 20px
-        svg
-          position: absolute
-
-
-// ALLGEMEINE STYLES -------------------------------------------------------------------
-
-
-
-.title
-  color: #EAB17D
-  font-size: 2rem
-  font-family: "proxima_nova_rgbold"
-
-.text
-  color: #6c6c6c
-  margin: 0 auto
-  line-height: 1.6rem
-  span
-    font-weight: bold
-
-
-@media only screen and (max-width: 500px)
-  .text
-    font-size: .9rem
-    color: #6c6c6c
-    margin: 0 auto
-    line-height: 1.5rem
-    span
-      font-weight: bold
-
-  .title
-    color: #EAB17D
-    font-size: 1.5rem
-    font-family: "proxima_nova_rgbold"
-    margin-bottom: 5px
-
-// AREA1 -------------------------------------------------------------------
-
-#area1
-  height: 281px
-  width: 100%
-  text-align: center
-  padding-top: 30px
-  padding-bottom: 30px
-  width: 100%
-  border-bottom-left-radius: 50% 20%
-  border-bottom-right-radius: 50% 20%
-  .wrapper
-    width: 500px
-    margin: 0 auto
-    max-width: 90%
-
-@media only screen and (max-width: 500px)
-  .haende
-    width: 50px
-
-// AREA2 -------------------------------------------------------------------
-
-#area2
-  .wrapper::before
-    content: ''
-    position: absolute
-    border-right: 1px solid rgba(197, 197, 197, 0.7)
-    left: 50%
-    height: 133.7%
-    z-index: 999
-    margin-top: 120px
-
-@media only screen and (max-width: 1174px)
-  #area2
-    .wrapper::before
-      content: ''
+      background-color: rgba(219, 125, 115, 0.9)
+      height: 100%
+      width: 100%
       position: absolute
-      border-right: none
-      left: 50%
-      height: 143.7%
-      z-index: 999
-      margin-top: 40px
-
-#area2
-  .wrapper
-    width: 100%
-    margin: 0 auto
-    max-width: 90%
-    margin-top: -20px
-    .wrapper1
-      width: 45%
-      float: left
-      .wrapper1_img
+      display: flex
+      justify-content: center
+      align-items: center
+      flex-direction: column
+      .wrapper
+        transform: skewY(10deg)
         display: flex
         justify-content: center
         align-items: center
-      .wrapper1_text
-        text-align: left
+        flex-direction: column
         h2
-          text-align: center
-          padding-bottom: 30px
-
-    .wrapper2
-      width: 45%
-      float: right
-      .wrapper2_img
-      .wrapper2_text
-        text-align: left
-        h2
-          text-align: center
-          padding-bottom: 30px
-        .wrapper2_eintrag
-          padding-bottom: 80px
-          .datum
-            display: flex
-            justify-content: space-between
-            color: #BDBDBD
-            h3
-              margin: 0
-            span
-              color: #7C7C7C
-          h2
-            text-align: left
-            color: #7C7C7C
-            margin: 0
-            padding-top: 10px
-            padding-bottom: 10px
-            font-size: 2rem
+          font-size: 38px
 
 
 
-@media only screen and (max-width: 1174px)
-  #area2
-    .wrapper
-      margin: 0 auto
-      max-width: 90%
-      margin-top: 40px
-      .wrapper1
-        width: 80%
-        max-width: 90%
-        margin: 0 auto
-        float: none
-        padding-bottom: 20px
-        .wrapper1_img
-          height: auto
-          display: flex
-          justify-content: center
-          align-items: center
-        .wrapper1_text
-          text-align: center
-          h2
-            text-align: center
-            padding-bottom: 10px
-
-      .wrapper2
-        height: auto
-        padding-top: 0px
-        padding-bottom: 50px
-        padding-left: 0
-        width: 100%
-        float: none
-        display: block
-        border-left: none
-        .wrapper2_img
-          height: auto
-          padding-top: 50px
-        .wrapper2_text
-          text-align: center
-          max-width: 90%
-          margin: 0 auto
-          h2
-            text-align: center
-            padding-bottom: 30px
-          .wrapper2_eintrag
-            padding-bottom: 80px
-            margin-right: 0
-            .datum
-              display: flex
-              justify-content: space-between
-              color: #BDBDBD
-              h3
-                margin: 0
-              span
-                color: #7C7C7C
-            h2
-              text-align: left
-              color: #7C7C7C
-              margin: 0
-              padding-top: 10px
-              padding-bottom: 10px
-              font-size: 2rem
-            .text
-              text-align: left
-              width: 100%
-              max-width: 100%
-
-@media only screen and (max-width: 500px)
-  #area2
-    .wrapper
-      margin: 0 auto
-      max-width: 90%
-      margin-top: 40px
-      .wrapper1
-        width: 80%
-        max-width: 90%
-        margin: 0 auto
-        float: none
-        padding-bottom: 20px
-        .wrapper1_img
-          height: auto
-          display: flex
-          justify-content: center
-          align-items: center
-        .wrapper1_text
-          text-align: center
-          h2
-            text-align: center
-            padding-bottom: 10px
-
-      .wrapper2
-        height: auto
-        padding-top: 0px
-        padding-bottom: 50px
-        padding-left: 0
-        width: 100%
-        float: none
-        display: block
-        border-left: none
-        .wrapper2_img
-          height: auto
-          padding-top: 50px
-        .wrapper2_text
-          text-align: center
-          max-width: 90%
-          margin: 0 auto
-          h2
-            text-align: center
-            padding-bottom: 30px
-          .wrapper2_eintrag
-            padding-bottom: 80px
-            margin-right: 0
-            .datum
-              display: flex
-              justify-content: space-between
-              color: #BDBDBD
-              h3
-                margin: 0
-                font-size: 1rem
-              span
-                color: #7C7C7C
-            h2
-              text-align: left
-              color: #7C7C7C
-              margin: 0
-              padding-top: 5px
-              padding-bottom: 10px
-              font-size: 1.7rem
-            .text
-              text-align: left
-              width: 100%
-              max-width: 100%
-
-@media only screen and (max-width: 500px) // Padding Bottom wegmachen
-  #area2
-    .wrapper
-      margin: 0 auto
-      max-width: 90%
-      margin-top: 40px
-      .wrapper1
-        width: 80%
-        max-width: 90%
-        margin: 0 auto
-        float: none
-        padding-bottom: 20px
-        .wrapper1_img
-          height: auto
-          display: flex
-          justify-content: center
-          align-items: center
-        .wrapper1_text
-          text-align: center
-          h2
-            text-align: center
-            padding-bottom: 10px
-
-      .wrapper2
-        height: auto
-        padding-top: 0px
-        padding-bottom: 50px
-        padding-left: 0
-        width: 100%
-        float: none
-        display: block
-        border-left: none
-        .wrapper2_img
-          height: auto
-          padding-top: 50px
-        .wrapper2_text
-          text-align: center
-          max-width: 90%
-          margin: 0 auto
-          h2
-            text-align: center
-            padding-bottom: 30px
-          .wrapper2_eintrag:last-child
-            padding-bottom: 0px
-            margin-right: 0
-            .datum
-              display: flex
-              justify-content: space-between
-              color: #BDBDBD
-              h3
-                margin: 0
-                font-size: 1rem
-              span
-                color: #7C7C7C
-            h2
-              text-align: left
-              color: #7C7C7C
-              margin: 0
-              padding-top: 5px
-              padding-bottom: 10px
-              font-size: 1.7rem
-            .text
-              text-align: left
-              width: 100%
-              max-width: 100%
-
-// GRAU -------------------------------------------------------------------
-
-
-.silver1
-  width: 100%
-  height: auto
-  position: absolute
-  top: 52%
-  left: 0
-  max-width: 100%
-  margin: 0 auto
-  z-index: -999
-
-@media only screen and (max-width: 500px)
-  .silver1
-    width: 100%
-    height: auto
-    position: absolute
-    top: 30%
-    left: 0
-    max-width: 100%
-    margin: 0 auto
-    z-index: -999
-
-.silver2
-  width: 100%
-  height: auto
-  position: absolute
-  top: 125%
-  left: 0
-  max-width: 100%
-  margin: 0 auto
-  z-index: -999
-
-@media only screen and (max-width: 500px)
-  .silver2
-    width: 100%
-    height: auto
-    position: absolute
-    top: 300%
-    left: 0
-    max-width: 100%
-    margin: 0 auto
-    z-index: -999
-
-.silver3
-  width: 100%
-  height: auto
-  position: absolute
-  top: 275%
-  left: 0
-  max-width: 100%
-  margin: 0 auto
-  z-index: -999
-
-@media only screen and (max-width: 500px)
-  .silver3
-    width: 100%
-    height: auto
-    position: absolute
-    top: 150%
-    left: 0
-    max-width: 100%
-    margin: 0 auto
-    z-index: -999
-
-.silver4
-  width: 100%
-  height: auto
-  position: absolute
-  top: 355%
-  left: 0
-  max-width: 100%
-  margin: 0 auto
-  z-index: -999
-
-@media only screen and (max-width: 500px)
-  .silver4
-    width: 100%
-    height: auto
-    position: absolute
-    top: 420%
-    left: 0
-    max-width: 100%
-    margin: 0 auto
-    z-index: -999
-
-// -------------------------------------------------------------------
-
-
-
-
-#area3
-  display: inline-block
-  width: 100%
-  padding-top: 0px
-  .wrapper
-    display: flex
-    justify-content: center
-    flex-direction: column
-    align-items: center
-  .eins
-    order: 1
-  .zwei
-    order: 3
-    display: flex
-    flex-direction: column
-  .drei
-    order: 2
-    display: flex
-  .viereck
-    height: 150px
-    width: 150px
-    border: 1px solid white
-
-  .viereck
-    background-image: url(/img/test.png)
-    background-size: cover
-    .viereck_overlay
-      background-color: rgba(0, 0, 0, 0.7)
-      height: 150px
-      width: 150px
-      display: flex
-      justify-content: center
-      align-items: center
-      transition: background-color ease-in 1s
-      h3
-        color: white
-        margin: 0
-
-  .viereck.gallerie1
-    background-image: url(/img/galerie_1.jpg)
-    background-size:cover
-    background-position: center
-
-
-  .viereck:hover
-    cursor: pointer
-    .viereck_overlay
-      background-color: rgba(0, 0, 0, 0.0)
-      height: 150px
-      width: 150px
-      display: flex
-      justify-content: center
-      align-items: center
-      h3
-        color: white
-        margin: 0
-
-
-@media only screen and (max-width: 492px)
-  #area3
-    display: inline-block
-    width: 100%
-    padding-top: 0px
-    .wrapper
-      display: flex
-      justify-content: center
-      flex-direction: column
-      align-items: center
-    .eins
-      padding-top: 30px
-      order: 1
-    .zwei
-      order: 3
-      display: flex
-      flex-direction: column
-    .drei
-      order: 2
-      display: flex
-      flex-direction: column
-    .viereck
-      height: 150px
-      width: 150px
-      border: 1px solid white
-
-
-// AREA4 -------------------------------------------------------------------
-
-#area4
+// Area1 ////////////////////////////////////////////////////////////////////
+#area1
   .wrapper
     padding-top: 50px
-    padding-bottom: 100px
-    position: relative
-    max-width: 100%
-    .small
-      position: absolute
-      left: 20%
-      z-index: -9999
-      width: 250px
-    #anfahrt
-      box-shadow: 0 2px 20px 0 rgba(0,0,0,0.50)
-      margin-left: 20px
-      margin-right: 20px
-      max-width: 90%
-      width: 450px
-    .weg
-      padding-top: 100px
-      width: 600px
-      margin: 0 auto
-      max-width: 90%
-      .small_title
-        color: #eab17d
-        font-family: "proxima_nova_rgbold"
-        margin: 0
-      .auto
-        width: 45%
-        float: left
-      p
-        color: #727272
-        font-family: 'proxima_nova_ltlight'
-        line-height: 1.4rem
-        margin-top: 5px
-      .bus
-        float: right
-        width: 45%
-    .adresse
-      clear: both
-      padding-top: 20px
-      .small_title
-        color: #eab17d
-        font-family: "proxima_nova_rgbold"
-        letter-spacing: 0
-        margin: 0
-      p
-        color: #727272
-        font-family: 'proxima_nova_ltlight'
-        margin-top: 5px
-        span
-          font-family: "proxima_nova_rgbold"
+    padding-bottom: 50px
+    display: flex
+    width: 90%
+    max-width: 90%
+    margin: 0 auto
+    .wrapper_left
+      width: 60%
+      padding-right: 100px
+      .left_eins
+        padding-bottom: 10px
+        border-bottom: 1px solid #dfdfdf
+        .title
+          text-align: center
+      .left_zwei
+        padding-top: 50px
+        padding-bottom: 50px
+        border-bottom: 1px solid #dfdfdf
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-direction: column
+        overflow: hidden
+        .eins
+          .viereck
+            height: 150px
+            width: 150px
+            border: 1px solid white
+            background-image: url(/img/eins.png)
+            background-position: center
+            background-size: cover
+            .overlay
+              background-color: rgba(0, 0, 0, 0.5)
+              height: 150px
+              width: 150px
+              display: flex
+              justify-content: center
+              align-items: center
+              color: white
+        .zwei
+          display: flex
+          .viereck
+            height: 150px
+            width: 150px
+            border: 1px solid white
+            background-image: url(/img/sieben.jpg)
+            background-position: center
+            background-size: cover
+            .overlay
+              background-color: rgba(0, 0, 0, 0.7)
+              height: 150px
+              width: 150px
+              display: flex
+              justify-content: center
+              align-items: center
+              color: white
+        .drei
+          display: flex
+          justify-content: center
+          flex-direction: column
+          .viereck
+            height: 150px
+            width: 150px
+            border: 1px solid white
+            background-image: url(/img/sieben.jpg)
+            background-position: center
+            background-size: cover
+            .overlay
+              background-color: rgba(0, 0, 0, 0.7)
+              height: 150px
+              width: 150px
+              display: flex
+              justify-content: center
+              align-items: center
+              color: white
+      .left_drei
+        padding-top: 50px
+        padding-bottom: 50px
+        border-bottom: 1px solid #dfdfdf
+        .title
+          text-align: center
+        .youtube
+          border-radius: 5%
+          box-shadow: 0px 80px 80px -50px rgba(86, 119, 119, 0.68)
+        .text
+          padding-top: 50px
+        .mehr_predigten
+          color: $red
+          text-decoration: underline
 
 
-@media only screen and (max-width: 550px)
-  #area4
+    .wrapper_right
+      width: 30%
+      padding: 0px
+      background-image: url(/img/hand.svg)
+      background-size: contain
+      background-repeat: no-repeat
+      .right_eins
+        padding-bottom: 10px
+        border-bottom: 1px solid #dfdfdf
+        .title
+          margin-bottom: 0
+        .details
+          display: flex
+          justify-content: space-between
+          font-size: .9rem
+          margin: 0
+          padding: 0
+          color: $grey
+        .right_title
+          text-align: left
+          margin: 0
+          color: #6F6F6F
+        .redner
+          text-align: left
+          line-height: 1.4rem
+          color: #E78B5E
+          span
+            color: #A7A7A7
+
+@media only screen and (max-width: 800px)
+  #area1
     .wrapper
       padding-top: 50px
-      position: relative
-      max-width: 100%
-      .small
-        position: absolute
-        left: 20%
-        z-index: -9999
-        width: 200px
-        height: 200px
-      .weg
-        padding-top: 50px
-        width: 600px
+      padding-bottom: 50px
+      display: flex
+      flex-direction: column
+      width: 90%
+      max-width: 90%
+      margin: 0 auto
+      .wrapper_left
+        width: 90%
+        padding-right: 0px
         margin: 0 auto
         max-width: 90%
-        .small_title
-          color: #eab17d
-          font-family: "proxima_nova_rgbold"
-        .auto
-          width: 45%
-          float: none
-          margin: 0 auto
-        .bus
-          padding-top: 20px
-          float: none
-          width: 45%
-          margin: 0 auto
-      .adresse
-        width: 45%
+        .left_eins
+          .title
+        .left_zwei
+          .eins
+            .viereck
+              .overlay
+          .zwei
+            .viereck
+              .overlay
+          .drei
+            .viereck
+              .overlay
+        .left_drei
+          border-bottom: 0px solid $grey
+          .title
+          .youtube
+            width: 90%
+            max-width: 90%
+          .text
+            text-align: center
+          .mehr_predigten
+
+
+      .wrapper_right
+        width: 80%
+        max-width: 80%
+        margin: 0 auto
+        padding: 20px
+        background-image: url(/img/hand.svg)
+        background-size: contain
+        background-repeat: no-repeat
+        .right_eins
+          padding-bottom: 10px
+          border-bottom: 1px solid #dfdfdf
+          border-top: 1px solid #dfdfdf
+          .title
+            margin-bottom: 0
+          .details
+            display: flex
+            justify-content: space-between
+            font-size: .9rem
+            margin: 0
+            padding: 0
+            color: $grey
+          .right_title
+            text-align: left
+            margin: 0
+            color: #6F6F6F
+          .redner
+            text-align: left
+            line-height: 1.4rem
+            color: #E78B5E
+            span
+              color: #A7A7A7
+
+// Area2 ////////////////////////////////////////////////////////////////////
+#area2
+  .title
+    text-align: center
+  .wrapper
+    padding-top: 50px
+    padding-bottom: 0px
+    text-align: center
+    width: 60%
+    max-width: 90%
+    margin: 0 auto
+    position: relative
+    #standort
+      z-index: 9999
+      border-radius: 5%
+      box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.5)
+      max-width: 90%
+    #stecker
+      position: absolute
+      left: 10%
+      z-index: -1
+      max-width: 90%
+    .text
+      text-align: center
+      padding-top: 20px
+    .redner
+      line-height: 1.5rem
+      color: #E78B5E
+
+
+// Area3 ////////////////////////////////////////////////////////////////////
+#area3
+  .title
+    text-align: center
+  .wrapper
+    padding-top: 20px
+    padding-bottom: 50px
+    text-align: left
+    width: 500px
+    max-width: 90%
+    margin: 0 auto
+    position: relative
+    form
+      max-width: 90%
+      margin: 0 auto
+      label
+        margin: .7rem
+      input, textarea
+        width: 100%
+        padding: .7rem 1rem
+        margin: .7rem
         display: inline-block
-        padding-top: 20px
-        .small_title
-          color: #eab17d
-          font-family: "proxima_nova_rgbold"
-          letter-spacing: 0
-          margin: 0
+        border: 1px solid #ccc
+        border-radius: 8px
+        box-sizing: border-box
+      input[type=submit]
+        background-color: $red
+        border: none
+        color: white
+
+
+#nachricht
+  position: absolute
+  right: 10%
+
+
+// FOOTER /////////////////////////////////////////////////////////////////
 
 footer
   display: flex
@@ -747,6 +435,7 @@ footer
   align-items: center
   background-color: #282828
   nav
+    display: inline-block
     padding: 30px
     text-align: center
     a
@@ -754,181 +443,75 @@ footer
       li
         display: inline-block
         -webkit-font-smoothing: antialiased
-        padding-left: 10px
-        padding-right: 10px
-        padding-bottom: 4px
+        padding: 10px
         color: white
         list-style: none
         font-size: .9rem
       li:hover
-        color: #eab17d
+        cursor: pointer
+        color: $red
 
+// GALLERIE /////////////////////////////////////////////////////////////////
 
-
-// GALLERIE -------------------------------------------------------------------
-
-.gallerie_titel
-  color: #EAB17D
-  font-size: 2rem
-  font-family: "proxima_nova_rgbold"
+#gallerie
+  padding-top: 50px
   margin-bottom: 50px
-  margin-top: 50px
+  display: flex
+  .wrapper
+    width: 1000px
+    max-width: 90%
+    margin: 0 auto
+    .titel
+      text-align: center
+      padding: 0
+      margin: 0
+    .container
+      max-width: 90%
+      margin: 0 auto
+      width: 90%
+      .item
+        width: 32.33%
+        float: left
+        padding: 2px
+        margin: 2px
+        box-sizing: border-box
+        height: 300px
+        background-color: red
+        background-position: center center
+        background-size: cover
+      .item-1
+        background-image: url(/img/eins.png)
+      .item-2
+        background-image: url(/img/zwei.png)
+      .item-3
+        background-image: url(/img/drei.png)
+      .item-4
+        background-image: url(/img/vier.png)
+      .item-5
+        background-image: url(/img/fuenf.png)
+      .item-6
+        background-image: url(/img/sechs.png)
+      .item-7
+        background-image: url(/img/sieben.png)
+      .item-8
+        background-image: url(/img/acht.png)
+      .item-9
+        background-image: url(/img/neun.png)
 
-.container
-  padding-top: 10px
-  margin: 0 auto
-  box-sizing: border-box
-  max-width: 90%
-  .item
-    width: 32.33%
-    float: left
-    padding: 2px
-    margin: 2px
-    box-sizing: border-box
-    background-image: url(/img/test.png)
-    background-size: 600px
-    background-position: center center
-    height: 300px
-  .item-1
-    background-image: url(/img/eins.jpg)
-  .item-2
-    background-image: url(/img/zwei.jpg)
-  .item-3
-    background-image: url(/img/drei.jpg)
-  .item-4
-    background-image: url(/img/vier.jpg)
-  .item-5
-    background-image: url(/img/fuenf.jpg)
-  .item-6
-    background-image: url(/img/sechs.jpg)
-  .item-7
-    background-image: url(/img/sieben.jpg)
-  .item-8
-    background-image: url(/img/acht.jpg)
-  .item-9
-    background-image: url(/img/neun.jpg)
 
+@media only screen and (max-width: 770px)
+  #gallerie
+    .wrapper
+      .titel
+      .container
+        .item
+          width: 48%
 
 
 @media only screen and (max-width: 500px)
-  .container
-    padding-top: 10px
-    margin: 0 auto
-    box-sizing: border-box
-    max-width: 90%
-    .item
-      width: 49.00%
-      float: left
-      padding: 2px
-      margin: 2px
-      box-sizing: border-box
-      background-image: url(/img/test.png)
-      background-size: 600px
-      background-position: center center
-      height: 300px
-    .item-1
-      background-image: url(/img/eins.jpg)
-    .item-2
-      background-image: url(/img/zwei.jpg)
-    .item-3
-      background-image: url(/img/drei.jpg)
-    .item-4
-      background-image: url(/img/vier.jpg)
-    .item-5
-      background-image: url(/img/fuenf.jpg)
-    .item-6
-      background-image: url(/img/sechs.jpg)
-    .item-7
-      background-image: url(/img/sieben.jpg)
-    .item-8
-      background-image: url(/img/acht.jpg)
-    .item-9
-      background-image: url(/img/neun.jpg)
-
-
-@media only screen and (max-width: 457px)
-  .container
-    padding-top: 10px
-    margin: 0 auto
-    box-sizing: border-box
-    max-width: 100%
-    .item
-      width: 90%
-      float: left
-      padding: 2px
-      margin: 2px
-      box-sizing: border-box
-      background-image: url(/img/test.png)
-      background-size: 600px
-      background-position: center center
-      height: 300px
-    .item-1
-      background-image: url(/img/eins.jpg)
-    .item-2
-      background-image: url(/img/zwei.jpg)
-    .item-3
-      background-image: url(/img/drei.jpg)
-    .item-4
-      background-image: url(/img/vier.jpg)
-    .item-5
-      background-image: url(/img/fuenf.jpg)
-    .item-6
-      background-image: url(/img/sechs.jpg)
-    .item-7
-      background-image: url(/img/sieben.jpg)
-    .item-8
-      background-image: url(/img/acht.jpg)
-    .item-9
-      background-image: url(/img/neun.jpg)
-
-// FULL SCREEN -----------------------------------------------------------------
-
-.preview
-  display: none
-  position: fixed
-  width: 100%
-  height: 100%
-  top: 0
-  right: 0
-  background-color: rgba(0, 0, 0, 0.8)
-  z-index: 9999
-
-
-.nicole
-  width: 70%
-  height: auto
-  position: absolute
-  top: 50%
-  left: 50%
-  transform: translate(-50%, -50%)
-  overflow: scroll
-
-.close
-  font-weight: bold
-  border: 0
-  text-align: center
-  border-radius: 50%
-  height: 3rem
-  width: 3rem
-  cursor: pointer
-  position: absolute
-  top: 1rem
-  left: 1rem
-  
-// Predigt -----------------------------------------------------------------
-
-#predigt
-  .wrapper
-    padding-top: 50px
-    max-width: 600px
-    margin: 0 auto
-    .predigt
-      padding-top: 50px
-      max-width: 90%
-    .predigt-titel
-      color: #696969
-      padding-top: 10px
-    .predigt-text
-      color: #adadad
-      font-family: 'proxima_nova_rgregular'
-      line-height: 1.4rem
+  #gallerie
+    .wrapper
+      .titel
+      .container
+        .item
+          width: 100%
