@@ -529,6 +529,11 @@ footer {
       padding-top: 20px;
       max-width: 90%; }
 
+.wrapper.bremen,
+.wrapper.gallerie {
+text-align: center;
+}
+
 .imagee {
   display: inline-block;
   position: relative;
