@@ -72,7 +72,7 @@ header {
     z-index: 9999; }
 
   #menu.active {
-    color: darkblue; }
+    color: white; }
 
   #main_nav {
     display: none; }
@@ -88,7 +88,7 @@ header {
       padding-left: 0px; }
     #main_nav.active li {
       display: block;
-      color: black;
+      color: #4b867f;
       padding: 20px; }
 
   #logo {
