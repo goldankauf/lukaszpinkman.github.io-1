@@ -80,7 +80,7 @@ header {
   #main_nav.active {
     display: block;
     width: 100%;
-    background-color: #ccc;
+    background-color: #82eadd;
     position: absolute;
     top: 0;
     text-align: center; }
@@ -88,6 +88,7 @@ header {
       padding-left: 0px; }
     #main_nav.active li {
       display: block;
+      color: black;
       padding: 20px; }
 
   #logo {
