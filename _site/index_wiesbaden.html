@@ -1,0 +1,149 @@
+<html>
+  <head>
+    <title>Starter Project</title>
+
+    <!-- Normalize HTML5 Reset -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css">
+
+    <!-- styles.css Link -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+
+    <!-- charset -->
+    <meta charset="UTF-8">
+
+    <!-- Responsive Shizz -->
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=0">
+
+
+
+  </head>
+
+  <body>
+
+
+
+<!-- nav -->
+
+
+<header>
+
+    <a href="#" id="menu">Menü</a>
+    <a href="#" id="logo">WerdeLicht</a>
+
+    <nav id="main_nav">
+      <ul>
+        <a href="index_2.html"><li>Wer wir sind</li></a>    
+        <a href="index_3.html"><li>Unser Ziel</li></a>
+        <a href="index_4.html"><li>Veranstaltungen</li></a>
+        <a href="index_5.html"><li>Predigten</li></a>
+        <a href="index_6.html"><li>Gallerie</li></a>
+        <a href="index_1/#area4.html"><li>Kontakt</li></a>
+        <a href="index_1.html"><li>Spende</li></a>
+      </ul>
+    </nav>
+
+</header>
+
+<!-- hero -->
+  <section id="hero">
+    <div class="wrapper_hero">
+
+      <div class="title_hero">
+        <h1>Mache Dich auf und werde Licht</h1>
+        <h2>Jesaja 60,1</h2>
+      </div>
+
+      <div class="button_hero">
+        <button id="button1">Kontakt</button>
+        <button id="button2">Einladung</button>
+      </div>
+
+    </div>
+  </section>
+
+
+
+
+    <!-- Gallerie zb. Bremen -->
+<section id="gallerie stadt">
+
+<h2 class="title">Wiesbaden</h2>
+
+<div class="wrapper bremen">
+  <img class="galleriebild" src="/img/wiesbaden/wiesbaden1.png" onclick="openModal();currentSlide(1)" class="hover-shadow">
+  <img class="galleriebild" src="/img/wiesbaden/wiesbaden2.png" onclick="openModal();currentSlide(2)" class="hover-shadow">
+  <img class="galleriebild" src="/img/wiesbaden/wiesbaden3.png" onclick="openModal();currentSlide(3)" class="hover-shadow">
+</div>
+
+<div class="wrapper bremen">
+<iframe width="450" height="270" src="https://www.youtube.com/embed/QzaG0T_hhbQ" frameborder="0" allowfullscreen></iframe>
+</div>
+
+  <div id="myModal" class="modal">
+    <span class="close cursor" onclick="closeModal()">&times;</span>
+    <div class="modal-content">
+
+      <div class="mySlides">
+        <div class="numbertext">1 / 32</div>
+          <img src="/img/wiesbaden/wiesbaden1.png" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">1 / 32</div>
+          <img src="/img/wiesbaden/wiesbaden2.png" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">1 / 32</div>
+          <img src="/img/wiesbaden/wiesbaden3.png" style="width:100%">
+      </div>
+
+
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    </div>
+  </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--footer-->
+
+<footer>
+
+  <nav>
+    <a href="#"><li>Home</li></a>
+    <a href="#"><li>Twitter</li></a>
+    <a href="#"><li>Instagram</li></a>
+    <a href="#"><li>Facebook</li></a>
+    <a href="#"><li>Impressum</li></a>
+    <a href="#"><li>FAQ</li></a>
+  </nav>
+
+</footer>
+
+
+
+
+
+  </body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="js/main.js"></script>
+</html>
