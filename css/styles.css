@@ -25,6 +25,13 @@ body, html {
   padding-top: 50px;
   padding-bottom: 50px; }
 
+@media only screen and (max-width: 600px) {
+  .wrapper {
+  padding-top: 20px;
+  padding-bottom: 20px; }}
+
+
+
 .green {
   color: #7dc5bb;
   font-weight: bold; }
