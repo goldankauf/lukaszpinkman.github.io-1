@@ -184,6 +184,7 @@ header {
     content: "";
     display: table; }
   #area1 .wrapper .left {
+    width: 100%;
     margin: 0 auto;
     float: none; }
     #area1 .wrapper .left img {
