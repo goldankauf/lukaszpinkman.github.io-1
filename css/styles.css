@@ -86,7 +86,7 @@ header {
 
   #main_nav.active {
     display: block;
-    width: 30%;
+    width: 50%;
     height: 100vh;
     background-color: #82eadd;
     position: absolute;
