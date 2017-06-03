@@ -157,6 +157,7 @@ header {
     #hero .wrapper_hero .button_hero #button2 {
       width: 90px; } }
 #area1 .wrapper {
+  max-width: 77%;
   padding-bottom: 0px; }
   #area1 .wrapper::after {
     clear: both;
