@@ -709,3 +709,34 @@ img.hover-shadow {
 
 .hover-shadow:hover {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
+
+
+
+@font-face {
+  font-family: 'MFRooneySans';
+  src: url("/fonts/DMFRooneySans-Bold.eot") format('embedded-opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+
+@font-face {
+	font-family: 'MFRooneySans';
+	src: url("/fonts/MFRooneySans-Bold.woff") format('woff');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'MFRooneySans';
+	src: url("/fonts/MFRooneySans-Medium.woff") format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+  font-family: 'MFRooneySans';
+  src: url("/fonts/MFRooneySans-Medium.eot") format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
