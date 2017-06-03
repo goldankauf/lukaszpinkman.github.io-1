@@ -46,21 +46,22 @@ body, html {
     color: #A0A0A0;
     text-align: center; } }
 header {
-  position: absolute;
+  position: relative;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0px 20px 0px 20px;
+  border-top: 4px solid #82eadd;
   box-sizing: border-box; }
   header a {
     text-decoration: none;
-    color: white; }
+    color: #666; }
   header li {
     list-style: none;
     display: inline-block;
-    padding: 10px;
-    color: white; }
+    padding: 15px;
+    color: #666; }
 
 #menu {
   display: none; }
@@ -143,6 +144,8 @@ header {
         color: white; }
 
 @media only screen and (max-width: 600px) {
+  #hero {
+  margin: 5px; }
   #hero .wrapper_hero .title_hero h1 {
     font-size: 1.4rem; }
   #hero .wrapper_hero .title_hero h2 {
