@@ -145,7 +145,7 @@ header {
 
 @media only screen and (max-width: 600px) {
   #hero {
-  margin: 5px; }
+  margin: 10px; }
   #hero .wrapper_hero .title_hero h1 {
     font-size: 1.4rem; }
   #hero .wrapper_hero .title_hero h2 {
