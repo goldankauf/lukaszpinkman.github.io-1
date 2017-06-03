@@ -75,6 +75,7 @@ header {
   #menu {
     display: block;
     padding: 20px;
+    color: white;
     z-index: 9999; }
 
   #menu.active {
