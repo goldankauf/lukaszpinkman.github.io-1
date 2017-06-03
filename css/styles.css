@@ -86,13 +86,15 @@ header {
 
   #main_nav.active {
     display: block;
-    width: 100%;
+    width: 30%;
+    height: 100vh;
     background-color: #82eadd;
     position: absolute;
     top: 0;
     left: 0;
-    text-align: center; }
+    text-align: left; }
     #main_nav.active ul {
+      padding-top: 50px;
       padding-left: 0px; }
     #main_nav.active li {
       display: block;
